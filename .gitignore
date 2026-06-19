@@ -1,0 +1,27 @@
+dependencies
+
+node_modules/
+.pnp
+.pnp.js
+
+build output (common for vite/webpack/etc)
+
+dist/
+build/
+out/
+
+environment variables
+
+.env
+.env.*
+
+logs and debug
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+OS-specific
+
+.DS_Store
+Thumbs.db

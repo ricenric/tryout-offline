@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tryout Offline</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="game-header">
+            <h1 class="game-title">Tryout Offline</h1>
+            <div class="controls">
+                <span class="hint-text">Press <span class="kbd-pill">Space</span> for new prompt</span>
+                
+                <div class="config-container">
+                    <label for="arrowCount" class="config-label">Keys</label>
+                    <select id="arrowCount" class="count-dropdown">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8" selected>8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                    </select>
+                </div>
+
+                <button id="playBtn" class="ctrl-btn" title="Start Test (Spacebar)">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </button>
+                <button id="resetBtn" class="ctrl-btn" title="Reset">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 4v6h-6"></path>
+                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        
+        <main class="game-body">
+            <!-- Starting / Welcome Landing Screen -->
+            <div id="startScreen" class="start-screen">
+                <h2 class="start-title">Press <span class="kbd-pill">Space</span> to begin and for a new prompt</h2>
+                <p class="start-subtitle"> Timer begins as soon as a new prompt is shown,</p>
+                <p class="start-subtitle"> and ends once the last arrow key is pressed </p>
+            </div>
+            
+            <div id="sequenceBox" class="sequence-container hidden">
+                <!-- Tokens injected here -->
+            </div>
+        </main>
+        
+        <!-- Persistent History Dashboard Panel -->
+        <div class="history-log">
+            <div class="history-title">History (Last 5)</div>
+            <ul id="historyList" class="history-list">
+                <li class="history-empty">No completions yet</li>
+            </ul>
+        </div>
+        
+        <footer class="game-footer">
+            <div class="divider"></div>
+            <div class="timer-label">Time</div>
+            <div id="timerDisplay" class="timer-value">0.00s</div>
+        </footer>
+    </div>
+
+</body>
+</html>
