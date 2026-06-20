@@ -13,7 +13,7 @@
         <header class="game-header">
             <h1 class="game-title">Tryout Offline</h1>
             <div class="controls">
-                <span class="hint-text">Press <span class="kbd-pill">Space</span> for new prompt</span>
+                <span class="hint-text">Press <span class="kbd-pill">Space</span> / <span class="kbd-pill">Ctrl</span> for new prompt</span>
                 
                 <div class="config-container">
                     <label for="arrowCount" class="config-label">Keys</label>
@@ -30,6 +30,13 @@
                         <option value="10">10</option>
                         <option value="11">11</option>
                     </select>
+                </div>
+
+                <div class="config-divider"></div>
+
+                <div class="config-container chance-config">
+                    <label class="config-label">Chance</label>
+                    <button id="chanceToggle" class="chance-pill" title="Click to enable Chance, click again to cycle count">Off</button>
                 </div>
 
                 <button id="playBtn" class="ctrl-btn" title="Start Test (Spacebar)">
@@ -49,7 +56,8 @@
         <main class="game-body">
             <!-- Starting / Welcome Landing Screen -->
             <div id="startScreen" class="start-screen">
-                <h2 class="start-title">Press <span class="kbd-pill">Space</span> to begin and for a new prompt</h2>
+                <h2 class="start-title">Press <span class="kbd-pill">Space</span> or <span class="kbd-pill">Ctrl</span> to begin and for a new prompt</h2>
+                <h2 class="start-title">Press <span class="kbd-pill">Del</span> to increment Chance level</h2>
                 <p class="start-subtitle"> Timer begins as soon as a new prompt is shown,</p>
                 <p class="start-subtitle"> and ends once the last arrow key is pressed </p>
             </div>
